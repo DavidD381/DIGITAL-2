@@ -171,7 +171,7 @@ always @(posedge clk) begin
 
             NAND_OP: begin
                 rgb <= 0;
-                result <= num_1 ~& num_2;
+                result <= ~(num_1 & num_2);
                 if (~sw[0] && (counter >= s) ) begin
                     state <= SELECT;
                     counter <= 0;
@@ -186,7 +186,7 @@ always @(posedge clk) begin
 
             NOR_OP: begin
                 rgb <= 0;
-                result <= num_1 ~| num_2;
+                result <= ~(num_1 | num_2);
                 if (~sw[1] && (counter >= s) ) begin
                     state <= SELECT;
                     counter <= 0;
