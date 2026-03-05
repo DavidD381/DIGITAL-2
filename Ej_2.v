@@ -25,6 +25,7 @@ localparam OR_OP = 4'b0110;
 localparam NAND_OP = 4'b0111;
 localparam NOR_OP = 4'b1000;
 localparam XOR_OP = 4'b1001;
+localparam SUB = 4'b1010;
 
 always @(posedge clk) begin
    
